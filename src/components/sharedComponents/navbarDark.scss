@@ -1,5 +1,12 @@
+.view {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
 .content-body {
-  width: 89vw;
+  width: 90vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .side-navbar {
@@ -7,9 +14,11 @@
   left: 0;
   bottom: 0;
   width: 8rem;
-  height: 100vh;
   background: #13005a;
   color: '#03C988';
+  position: sticky;
+  margin-top: auto;
+  height: 100%;
 }
 
 .side-navbar :hover {

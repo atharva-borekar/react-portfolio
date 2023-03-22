@@ -32,6 +32,8 @@
   text-decoration: none;
   vertical-align: top;
   width: 80px;
+  justify-content: center;
+  align-items: center;
 }
 
 .side-navbar-body {
@@ -40,4 +42,6 @@
 
 .side-navbar-link {
   color: #03c988;
+  margin-right: auto !important;
+  margin-left: auto !important;
 }

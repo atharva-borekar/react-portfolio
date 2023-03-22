@@ -1,8 +1,8 @@
 import {
   faAddressCard,
+  faBox,
   faBoxesPacking,
   faBriefcase,
-  faFileLines,
   faHouse,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,27 +28,29 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
   const { pathname } = useLocation();
 
   return (
-    <OverlayTrigger
-      onEnter={startBounce}
-      onExit={stopBounce}
-      placement='right'
-      delay={{ show: 250, hide: 400 }}
-      overlay={renderTooltip}
-    >
-      <Nav.Link
-        className='my-3 mx-3 side-navbar-link justify-content-center align-items-center'
-        href={href}
-        onClick={() => router.navigate(href)}
-        active={Boolean(location)}
+    <div className='d-flex justify-content-center align-items-center'>
+      <OverlayTrigger
+        onEnter={startBounce}
+        onExit={stopBounce}
+        placement='right'
+        delay={{ show: 250, hide: 400 }}
+        overlay={renderTooltip}
       >
-        <FontAwesomeIcon
-          size={'2x'}
-          icon={icon}
-          bounce={shouldBounce}
-          color={shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : '#1C82AD'}
-        />
-      </Nav.Link>
-    </OverlayTrigger>
+        <Nav.Link
+          className='my-3 side-navbar-link'
+          href={href}
+          onClick={() => router.navigate(href)}
+          active={Boolean(location)}
+        >
+          <FontAwesomeIcon
+            size={'2x'}
+            icon={icon}
+            bounce={shouldBounce}
+            color={shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : '#1C82AD'}
+          />
+        </Nav.Link>
+      </OverlayTrigger>
+    </div>
   );
 };
 
@@ -57,12 +59,13 @@ const SideNavbar = (props: any) => {
   console.log({ theme });
 
   return (
-    <div className='d-flex flex-row'>
+    <div className='d-flex flex-row view'>
       <Navbar className='side-navbar' expand='sm'>
         <Container className='d-flex flex-column'>
           <Navbar.Brand className='side-navbar-head' href='#home'>
             AB
           </Navbar.Brand>
+
           <Navbar.Toggle />
           <Navbar.Collapse id='basic-navbar-nav' className='align-items-end justify-content-center'>
             <Nav className='d-flex flex-column side-navbar-body'>
@@ -74,7 +77,7 @@ const SideNavbar = (props: any) => {
 
               <Navlink icon={faBoxesPacking} href='/projects' tag='Projects' />
               <hr />
-              <Navlink icon={faFileLines} href='/resume' tag='Resume' />
+              <Navlink icon={faBox} href='/resume' tag='Resume' />
               <hr />
               <Navlink icon={faAddressCard} href='/about' tag='About' />
               <hr />
@@ -84,7 +87,7 @@ const SideNavbar = (props: any) => {
         </Container>
       </Navbar>
 
-      <div className='content-body mx-3 my-5'>{props?.children}</div>
+      <div className='content-body'>{props?.children}</div>
     </div>
   );
 };
