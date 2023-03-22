@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 import router from 'root/routes';
 import './navbar.scss';
 
@@ -22,6 +23,8 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
       </Tooltip>
     );
   };
+  const { pathname } = useLocation();
+
   return (
     <OverlayTrigger
       onEnter={startBounce}
@@ -34,12 +37,13 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
         className='my-3 mx-3 side-navbar-link justify-content-center align-items-center'
         href={href}
         onClick={() => router.navigate(href)}
+        active={Boolean(location)}
       >
         <FontAwesomeIcon
           size={'2x'}
           icon={icon}
           bounce={shouldBounce}
-          color={shouldBounce ? '#FFFFFF' : '#1C82AD'}
+          color={shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : '#1C82AD'}
         />
       </Nav.Link>
     </OverlayTrigger>
@@ -58,14 +62,13 @@ const SideNavbar = (props: any) => {
           <Navbar.Collapse id='basic-navbar-nav' className='align-items-end justify-content-center'>
             <Nav className='d-flex flex-column side-navbar-body'>
               <hr />
-
               <Navlink icon={faHouse} href='/' tag='Home' />
               <hr />
-              <Navlink icon={faBriefcase} href='work' tag='Work' />
+              <Navlink icon={faBriefcase} href='/work' tag='Work' />
               <hr />
-              <Navlink icon={faFileLines} href='resume' tag='Resume' />
+              <Navlink icon={faFileLines} href='/resume' tag='Resume' />
               <hr />
-              <Navlink icon={faAddressCard} href='about' tag='About' />
+              <Navlink icon={faAddressCard} href='/about' tag='About' />
               <hr />
             </Nav>
           </Navbar.Collapse>
