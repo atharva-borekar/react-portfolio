@@ -1,5 +1,6 @@
 import {
   faAddressCard,
+  faBoxesPacking,
   faBriefcase,
   faFileLines,
   faHouse,
@@ -70,6 +71,9 @@ const SideNavbar = (props: any) => {
               <hr />
               <Navlink icon={faBriefcase} href='/work' tag='Work' />
               <hr />
+
+              <Navlink icon={faBoxesPacking} href='/projects' tag='Projects' />
+              <hr />
               <Navlink icon={faFileLines} href='/resume' tag='Resume' />
               <hr />
               <Navlink icon={faAddressCard} href='/about' tag='About' />
@@ -80,7 +84,7 @@ const SideNavbar = (props: any) => {
         </Container>
       </Navbar>
 
-      <div className='d-flex'>{props?.children}</div>
+      <div className='content-body mx-3 my-5'>{props?.children}</div>
     </div>
   );
 };
