@@ -5,11 +5,12 @@ import {
   faHouse,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
-import { Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { ThemeContext } from 'contexts/themeContext';
+import { useContext, useState } from 'react';
+import { Button, Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import router from 'root/routes';
-import './navbar.scss';
+import './navbarDark.scss';
 
 const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
   const [shouldBounce, setShouldBounce] = useState(false);
@@ -51,6 +52,9 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
 };
 
 const SideNavbar = (props: any) => {
+  const { toggleTheme, theme } = useContext(ThemeContext);
+  console.log({ theme });
+
   return (
     <div className='d-flex flex-row'>
       <Navbar className='side-navbar' expand='sm'>
@@ -70,6 +74,7 @@ const SideNavbar = (props: any) => {
               <hr />
               <Navlink icon={faAddressCard} href='/about' tag='About' />
               <hr />
+              <Button onClick={toggleTheme}>Toggle Theme</Button>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -81,7 +86,6 @@ const SideNavbar = (props: any) => {
 };
 
 export const withSideNavbar = (wrappedComponent: any) => {
-  console.log({ wrappedComponent });
   return <SideNavbar>{wrappedComponent.children}</SideNavbar>;
 };
 
