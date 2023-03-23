@@ -56,7 +56,6 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
 
 const SideNavbar = (props: any) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
-  console.log({ theme });
 
   return (
     <div className='d-flex flex-row view'>

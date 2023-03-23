@@ -1,5 +1,5 @@
 import './card.scss';
-const CustomCard = () => {
+const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backContent?: any }) => {
   return (
     <div className='flip-box'>
       <div
@@ -9,13 +9,13 @@ const CustomCard = () => {
         }}
       >
         <div className='content text-center'>
-          First
+          {frontContent}
           <br />
           <span className='click-for-more'></span>
         </div>
       </div>
       <div className='back'>
-        <div className='content'>First Back</div>
+        <div className='content'>{backContent}</div>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 .flip-box {
+  margin-top: 2%;
+  margin-bottom: 2%;
   display: flex;
   align-content: stretch;
-  min-height: 200px;
+  min-height: 40vh;
   flex-wrap: wrap;
   position: relative;
   border: 10px solid transparent;
