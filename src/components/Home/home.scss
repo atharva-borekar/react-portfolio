@@ -1,0 +1,43 @@
+.home-content {
+  max-height: 150vh;
+  padding: 0 2%;
+}
+
+.home-head {
+  height: max-content;
+  margin-top: 5%;
+  // background-color: aqua;
+}
+
+.home-head-text {
+  transition: color 0.5s ease;
+}
+
+.home-head-name-dark {
+  font-size: 8rem;
+  color: var(--text-primary-dark);
+}
+
+.home-head-name-light {
+  font-size: 8rem;
+  color: var(--text-primary-light);
+}
+
+.home-head-role-dark {
+  font-size: 6rem;
+  color: var(--text-secondary-dark);
+}
+
+.home-head-role-light {
+  font-size: 6rem;
+  color: var(--text-secondary-light);
+}
+
+.home-body {
+  height: max-content;
+  background-color: bisque;
+}
+.home-foot {
+  height: max-content;
+  background-color: blueviolet;
+}

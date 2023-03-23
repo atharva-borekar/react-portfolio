@@ -24,20 +24,32 @@ body {
 
   --bg-navbar-light: rgb(104, 104, 255);
   --bg-navbar-dark: rgb(29, 29, 58);
+
+  --dark-gray: #ededed;
+  --dark-accent: #da0037;
+  --dark-secondary: #444444;
+  --dark-primary: #171717;
+
+  --light-gray: #354259;
+  --light-accent: #cdc2ae;
+  --light-secondary: #ece5c7;
+  --light-primary: #c2ded1;
 }
 
 .light-theme {
   --text-primary: var(--text-primary-light);
   --text-secondary: var(--text-secondary-light);
-  --bg-primary: var(--bg-primary-light);
-  --bg-secondary: var(--bg-secondary-light);
-  --bg-navbar: var(--bg-navbar-light);
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --bg-navbar: var(--dark-primary);
+  --accent: var(--dark-accent);
 }
 
 .dark-theme {
   --text-primary: var(--text-primary-dark);
   --text-secondary: var(--text-secondary-dark);
-  --bg-primary: var(--bg-primary-dark);
-  --bg-secondary: var(--bg-secondary-dark);
-  --bg-navbar: var(--bg-navbar-dark);
+  --primary: var(--light-primary);
+  --secondary: var(--light-secondary);
+  --bg-navbar: var(--light-primary);
+  --accent: var(--light-accent);
 }

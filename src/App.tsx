@@ -5,7 +5,7 @@ import router from 'root/routes';
 import './App.css';
 
 const ThemeProvider = (props: any) => {
-  const [theme, setTheme] = useState(themes.light);
+  const [theme, setTheme] = useState<any>(themes.dark);
   const toggleTheme = () => {
     if (theme.type === 'dark') {
       setTheme(themes.light);
