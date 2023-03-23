@@ -36,7 +36,7 @@
 .side-navbar-head {
   background: #13005a;
   color: var(--text-primary);
-  display: inline-block;
+  // display: inline-block;
   font-size: 40px;
   font-weight: 600;
   height: 80px;
@@ -50,6 +50,7 @@
 
 .side-navbar-body {
   color: #03c988;
+  height: 100%;
 }
 
 .side-navbar-link {

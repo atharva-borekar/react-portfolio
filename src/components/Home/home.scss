@@ -1,12 +1,19 @@
 .home-content {
-  max-height: 150vh;
   padding: 0 2%;
+  overflow: hidden;
+  height: 98%;
+  display: flexbox;
+  position: relative;
 }
 
 .home-head {
   height: max-content;
   margin-top: 5%;
-  // background-color: aqua;
+  flex: 0 1 auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  opacity: 1;
 }
 
 .home-head-text {
@@ -34,8 +41,16 @@
 }
 
 .home-body {
+  max-height: -webkit-fill-available;
+  overflow-y: scroll;
   height: max-content;
-  background-color: bisque;
+  font-size: 2rem;
+  margin-top: 5%;
+  color: var(--text-secondary-dark);
+}
+
+.home-body::-webkit-scrollbar {
+  display: none;
 }
 .home-foot {
   height: max-content;

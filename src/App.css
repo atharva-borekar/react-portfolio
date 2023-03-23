@@ -1,6 +1,8 @@
 body {
   background-color: #13005a;
   background-image: url('./assets/images/body_background.jpg');
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
