@@ -1,26 +1,27 @@
-import Card from 'components/sharedComponents/Card';
 import Page from 'components/sharedComponents/navbar';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import TimeLine from './Timeline';
 
 const WorkPage = () => {
   return (
     <Page>
       <Row>
-        <Col xl={4}>
-          <Card />
+        <TimeLine />
+        {/* <Col xl={4}>
+          <CustomCard />
         </Col>
         <Col xl={4}>
-          <Card />
+          <CustomCard />
         </Col>
         <Col xl={4}>
-          <Card />
+          <CustomCard />
         </Col>
         <Col xl={4}>
-          <Card />
+          <CustomCard />
         </Col>
         <Col xl={4}>
-          <Card />
-        </Col>
+          <CustomCard />
+        </Col> */}
       </Row>
     </Page>
   );

@@ -1,5 +1,5 @@
 import './card.scss';
-const Card = () => {
+const CustomCard = () => {
   return (
     <div className='flip-box'>
       <div
@@ -21,4 +21,4 @@ const Card = () => {
   );
 };
 
-export default Card;
+export default CustomCard;
