@@ -13,37 +13,24 @@ const HomePage = () => {
         <div className='home-head'>
           <div className={`home-head-text home-head-name-${theme.type}`}>Atharva Borekar</div>
           <div className={`home-head-text home-head-role-${theme.type}`}>Frontend Developer</div>
-          <Button variant='outline-secondary'>ABC</Button>
+          <Button disabled variant='outline-warning' className='mx-2'>
+            React.Js
+          </Button>
+          <Button disabled variant='outline-warning' className='mx-2'>
+            JavaScript
+          </Button>
+          <Button disabled variant='outline-warning' className='mx-2'>
+            TypeScript
+          </Button>
+          <Button disabled variant='outline-warning' className='mx-2'>
+            HTML / CSS
+          </Button>
         </div>
         <div className='home-body'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Sed risus pretium quam vulputate dignissim. Senectus et
-          netus et malesuada fames ac turpis egestas. Ornare arcu odio ut sem. Tellus elementum
-          sagittis vitae et leo. Scelerisque in dictum non consectetur a. Pellentesque dignissim
-          enim sit amet. Lorem ipsum dolor sit amet consectetur adipiscing elit. Potenti nullam ac
-          tortor vitae purus faucibus ornare suspendisse. Iaculis eu non diam phasellus vestibulum
-          lorem sed. Lectus sit amet est placerat. Risus nec feugiat in fermentum posuere. Quis
-          ipsum suspendisse ultrices gravida dictum fusce. Amet consectetur adipiscing elit
-          pellentesque habitant morbi tristique senectus. Risus in hendrerit gravida rutrum quisque
-          non tellus orci. Vulputate enim nulla aliquet porttitor. Amet justo donec enim diam
-          vulputate. Elit ut aliquam purus sit. Nulla at volutpat diam ut venenatis tellus in metus
-          vulputate. Enim facilisis gravida neque convallis a cras semper auctor. Enim neque
-          volutpat ac tincidunt vitae semper. Varius quam quisque id diam vel quam elementum
-          pulvinar etiam. Porttitor rhoncus dolor purus non enim praesent. // Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Sed risus pretium quam vulputate dignissim. Senectus et netus et malesuada
-          fames ac turpis egestas. Ornare arcu odio ut sem. Tellus elementum sagittis vitae et leo.
-          Scelerisque in dictum non consectetur a. Pellentesque dignissim enim sit amet. Lorem ipsum
-          dolor sit amet consectetur adipiscing elit. Potenti nullam ac tortor vitae purus faucibus
-          ornare suspendisse. Iaculis eu non diam phasellus vestibulum lorem sed. Lectus sit amet
-          est placerat. Risus nec feugiat in fermentum posuere. Quis ipsum suspendisse ultrices
-          gravida dictum fusce. Amet consectetur adipiscing elit pellentesque habitant morbi
-          tristique senectus. Risus in hendrerit gravida rutrum quisque non tellus orci. Vulputate
-          enim nulla aliquet porttitor. Amet justo donec enim diam vulputate. Elit ut aliquam purus
-          sit. Nulla at volutpat diam ut venenatis tellus in metus vulputate. Enim facilisis gravida
-          neque convallis a cras semper auctor. Enim neque volutpat ac tincidunt vitae semper.
-          Varius quam quisque id diam vel quam elementum pulvinar etiam. Porttitor rhoncus dolor
-          purus non enim praesent.
+          An avid person who is always curious about the working of technology around him. Technical
+          skills:- JavaScript, TypeScript, ReactJS, Git, Redux, Redux Saga, React Query, React
+          Testing Library. Possess good communication skills and flexible to work in any environment
+          as required.
         </div>
         <div className='home-foot'></div>
       </div>

@@ -15,7 +15,7 @@ body {
   --secondary-blue: rgb(96, 96, 182);
 
   --text-primary-light: black;
-  --text-primary-dark: white;
+  --text-secondary-light: white;
 
   --text-secondary-light: rgb(70, 70, 70);
   --text-secondary-dark: rgb(160, 160, 160);
@@ -50,7 +50,7 @@ body {
 }
 
 .dark-theme {
-  --text-primary: var(--text-primary-dark);
+  --text-primary: var(--text-secondary-light);
   --text-secondary: var(--text-secondary-dark);
   --primary: var(--light-primary);
   --secondary: var(--light-secondary);

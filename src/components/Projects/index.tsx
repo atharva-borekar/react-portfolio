@@ -4,9 +4,9 @@ import Page from 'components/sharedComponents/navbar';
 import { ThemeContext } from 'contexts/themeContext';
 import { useContext } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import { CgWebsite } from 'react-icons/cg';
 import { FaGithub } from 'react-icons/fa';
 import './projects.scss';
-
 const projects = [
   {
     id: 1,
@@ -21,6 +21,7 @@ const projects = [
     summary:
       'React Easy Deploy is a promise driven script to help you in deploying your React.Js application with ease.',
     github: 'https://github.com/atharva-borekar/react-deploy-v1',
+    website: 'https://www.npmjs.com/package/react-easy-deploy?activeTab=readme',
   },
   {
     id: 2,
@@ -55,10 +56,8 @@ const projects = [
     id: 4,
     name: 'The Modern Times',
     description: [
-      'Install necessary npm packages.',
-      'Create a production build locally.',
-      'Transfer the build to the server specified.',
-      'Install and configure NGINX server on AWS instance.',
+      'This project is made to be deployed in P.E.S Modern College of Engineering for better information sharing inside the college.',
+      'You can make changes to this project and deploy it in your systems as well.',
     ],
     footer: [],
     summary:
@@ -69,10 +68,8 @@ const projects = [
     id: 5,
     name: 'Job Referral System',
     description: [
-      'Install necessary npm packages.',
-      'Create a production build locally.',
-      'Transfer the build to the server specified.',
-      'Install and configure NGINX server on AWS instance.',
+      'The Job Referral App is a platform where companies can ask their Employees for referrals for the posts generated in the company. ',
+      'The recruiters will be able to post the requirements and the Employees will be able to view the posts, ask doubts in the comments section and also post the referrals to the employer.',
     ],
     footer: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -88,7 +85,7 @@ const ProjectsPage = () => {
 
   return (
     <Page>
-      <h1 className={`text-${theme.color}`}>Projects Page</h1>
+      <h1 className={`text-${theme.color}`}>Projects</h1>
       <Row>
         {projects.map((project) => (
           <Col key={project.id}>
@@ -122,6 +119,15 @@ const ProjectsPage = () => {
                           window.open(project.github);
                         }}
                         Icon={FaGithub}
+                        size='2em'
+                      />
+                    )}
+                    {project?.website && (
+                      <ButtonIcon
+                        onClick={() => {
+                          window.open(project.website);
+                        }}
+                        Icon={CgWebsite}
                         size='2em'
                       />
                     )}
