@@ -5,16 +5,18 @@ import './timeline.scss';
 
 const TimelineCard = ({ work, theme }: { work: any; theme: any }) => {
   const { type } = theme;
-  console.log({ theme });
   return (
     <div className='d-flex'>
       <div className='role-start'></div>
       <Card className={`my-3 mx-3 w-100 role-card-${type}`}>
         <Card.Header className='d-flex flex-column'>
           <h2>{work.designation}</h2>
-          <em>
-            {work.fromDate}-{work.toDate}
-          </em>
+          <div className='d-flex justify-content-between'>
+            <h5>{work.organization}</h5>
+            <em>
+              {work.fromDate}-{work.toDate}
+            </em>
+          </div>
         </Card.Header>
         <Card.Body>
           <h4>Responsibilities:</h4>
