@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  background-color: #13005a;
+  background-image: url('./assets/images/body_background_1.jpg');
+  backdrop-filter: blur(8px) brightness(50%);
+  -webkit-backdrop-filter: blur(8px) brightness(50%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: Montserrat;
+}
+
+:root {
+  --primary-blue: rgb(0, 0, 255);
+  --secondary-blue: rgb(96, 96, 182);
+
+  --text-primary-light: black;
+  --text-secondary-light: white;
+
+  --text-secondary-light: rgb(70, 70, 70);
+  --text-secondary-dark: rgb(160, 160, 160);
+
+  --bg-primary-light: white;
+  --bg-primary-dark: black;
+
+  --bg-secondary-light: rgb(212, 212, 212);
+  --bg-secondary-dark: rgb(34, 34, 34);
+
+  --bg-navbar-light: rgb(104, 104, 255);
+  --bg-navbar-dark: rgb(29, 29, 58);
+
+  --dark-gray: #ededed;
+  --dark-accent: #da0037;
+  --dark-secondary: #444444;
+  --dark-primary: #171717;
+
+  --light-gray: #354259;
+  --light-accent: #cdc2ae;
+  --light-secondary: #ece5c7;
+  --light-primary: #c2ded1;
+}
+
+.light-theme {
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --primary: var(--dark-primary);
+  --secondary: var(--dark-secondary);
+  --bg-navbar: var(--dark-primary);
+  --accent: var(--dark-accent);
+}
+
+.dark-theme {
+  --text-primary: var(--text-secondary-light);
+  --text-secondary: var(--text-secondary-dark);
+  --primary: var(--light-primary);
+  --secondary: var(--light-secondary);
+  --bg-navbar: var(--light-primary);
+  --accent: var(--light-accent);
+}
+* {
+  font-family: Montserrat;
+}
