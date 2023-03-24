@@ -3,7 +3,7 @@ import CustomCard from 'components/sharedComponents/Card';
 import Page from 'components/sharedComponents/navbar';
 import { ThemeContext } from 'contexts/themeContext';
 import { useContext } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 import './projects.scss';
 
@@ -94,27 +94,28 @@ const ProjectsPage = () => {
           <Col key={project.id}>
             <CustomCard
               frontContent={
-                <div>
-                  <div className='project-header-front'>
-                    <h1>{project.name}</h1>
-                  </div>
-                  <div className='project-body-front mt-5'>{project.summary}</div>
-                  <div className='project-footer-front'></div>
-                </div>
+                <Card className='bg-dark project-content-front'>
+                  <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
+                  <Card.Body className='bg-dark project-content-body'>
+                    <Card.Title>{project.name}</Card.Title>
+                    <Card.Text className='project-content-body'>{project.summary}</Card.Text>
+                  </Card.Body>
+                </Card>
               }
               backContent={
-                <div>
-                  <div className='project-header-back'>
-                    <h1>{project.name}</h1>
-                  </div>
-                  <div className='project-body-back mt-5'>
-                    <ul>
-                      {project.description?.map((e, index) => (
-                        <li key={index}>{e}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className='project-footer-back'>
+                <Card className='bg-dark project-content-back'>
+                  <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
+                  <Card.Body className='bg-dark project-content-body'>
+                    <Card.Title>{project.name}</Card.Title>
+                    <Card.Text className='project-content-body'>
+                      <ul>
+                        {project.description?.map((e, index) => (
+                          <li key={index}>{e}</li>
+                        ))}
+                      </ul>
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
                     {project?.github && (
                       <ButtonIcon
                         onClick={() => {
@@ -124,9 +125,32 @@ const ProjectsPage = () => {
                         size='2em'
                       />
                     )}
-                  </div>
-                  )
-                </div>
+                  </Card.Footer>
+                </Card>
+                // <div>
+                //   <div className='project-header-back'>
+                //     <h1>{project.name}</h1>
+                //   </div>
+                //   <div className='project-body-back mt-5'>
+                // <ul>
+                //   {project.description?.map((e, index) => (
+                //     <li key={index}>{e}</li>
+                //   ))}
+                // </ul>
+                //   </div>
+                //   <div className='project-footer-back'>
+                // {project?.github && (
+                //   <ButtonIcon
+                //     onClick={() => {
+                //       window.open(project.github);
+                //     }}
+                //     Icon={FaGithub}
+                //     size='2em'
+                //   />
+                // )}
+                //   </div>
+                //   )
+                // </div>
               }
             />
           </Col>

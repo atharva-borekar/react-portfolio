@@ -11,13 +11,11 @@
   border-top: 0;
   -webkit-perspective: 1000;
   perspective: 1000;
-  border-radius: 10%;
 
   &:hover {
     .back {
       transform: rotateY(0deg);
       z-index: 10;
-      background-color: var(--bs-primary) !important;
     }
 
     .front {
@@ -70,8 +68,6 @@
     display: flex;
     text-align: justify;
     align-items: center;
-    margin-top: 5vh;
-    padding: 5%;
     flex-direction: column;
     width: -webkit-fill-available;
     height: -webkit-fill-available;

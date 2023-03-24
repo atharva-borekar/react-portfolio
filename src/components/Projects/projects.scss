@@ -6,26 +6,27 @@
   // transform: skew(0deg, -6deg);
 }
 
-.project-body-front {
+.project-content-front {
+  border-radius: 10%;
   font-size: 1.5rem;
-  max-height: 40vh;
   overflow: auto;
 }
-.project-body-front::-webkit-scrollbar {
+.project-content-front::-webkit-scrollbar {
   display: none;
 }
 
-.project-body-back {
+.project-content-back {
+  border-radius: 10%;
   font-size: 1.5rem;
-  max-height: 40vh;
   overflow: auto;
 }
-.project-body-back::-webkit-scrollbar {
+.project-content-back::-webkit-scrollbar {
   display: none;
 }
 
 .project-header-front {
   height: 6rem;
+
   justify-content: center;
 }
 
@@ -36,9 +37,16 @@
 
 .project-footer-front {
   position: absolute;
-  bottom: 10%;
+  // bottom: 10%;
 }
 .project-footer-back {
   position: absolute;
-  bottom: 5%;
+  // bottom: 5%;
+}
+.project-content-body {
+  height: 100%;
+  overflow: auto;
+}
+.project-content-body::-webkit-scrollbar {
+  display: none;
 }
