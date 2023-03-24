@@ -3,7 +3,7 @@ const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backCon
   return (
     <div className='flip-box'>
       <div
-        className='front'
+        className='front bg-dark'
         style={{
           backgroundImage: require('https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&h=350'),
         }}
@@ -11,10 +11,10 @@ const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backCon
         <div className='content text-center'>
           {frontContent}
           <br />
-          <span className='click-for-more'></span>
+          {/* <span className='click-for-more'></span> */}
         </div>
       </div>
-      <div className='back'>
+      <div className='back bg-dark'>
         <div className='content'>{backContent}</div>
       </div>
     </div>
