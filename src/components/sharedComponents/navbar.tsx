@@ -61,7 +61,7 @@ const SideNavbar = (props: any) => {
     <div className='d-flex flex-row view'>
       <Navbar className='side-navbar' expand='sm'>
         <Container className='d-flex flex-column'>
-          <Navbar.Brand className={`side-navbar-head text-${theme.color}`} href='#home'>
+          <Navbar.Brand className={`side-navbar-head text-${theme.color}`} href='/'>
             AB
           </Navbar.Brand>
 
