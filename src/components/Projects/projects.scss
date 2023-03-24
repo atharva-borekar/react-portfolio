@@ -1,9 +1,9 @@
 .unskew-content-front {
-  transform: skew(0deg, 6deg);
+  // transform: skew(0deg, 6deg);
 }
 
 .unskew-content-back {
-  transform: skew(0deg, -6deg);
+  // transform: skew(0deg, -6deg);
 }
 
 .project-body-front {
@@ -40,5 +40,5 @@
 }
 .project-footer-back {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
 }

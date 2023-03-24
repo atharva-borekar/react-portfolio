@@ -15,12 +15,13 @@
 
   &:hover {
     .back {
-      transform: rotateY(0deg) skew(0deg, 6deg);
+      transform: rotateY(0deg);
       z-index: 10;
+      background-color: var(--bs-primary) !important;
     }
 
     .front {
-      transform: rotateY(180deg) skew(0deg, -6deg);
+      transform: rotateY(180deg);
       z-index: -1;
     }
   }
@@ -50,7 +51,7 @@
     bottom: 0;
     width: 100%;
     z-index: -1;
-    transform: rotateY(-180deg) skew(0deg, 6deg);
+    transform: rotateY(-180deg);
     .content {
       font-size: 2rem;
     }
@@ -60,7 +61,6 @@
     z-index: 10;
     justify-content: center;
     align-items: center;
-    transform: skew(0deg, -6deg);
     .content {
       font-size: 2rem;
     }
