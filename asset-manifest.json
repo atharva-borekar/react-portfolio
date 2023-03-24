@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://atharva-borekar.github.io/react-portfolio/static/css/main.442b98ad.css",
-    "main.js": "https://atharva-borekar.github.io/react-portfolio/static/js/main.7379da0b.js",
+    "main.js": "https://atharva-borekar.github.io/react-portfolio/static/js/main.6237a552.js",
     "static/js/787.a2cb61a6.chunk.js": "https://atharva-borekar.github.io/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/resume.jpg": "https://atharva-borekar.github.io/react-portfolio/static/media/resume.b29ed50a178c4e4d098d.jpg",
     "static/media/body_background_1.jpg": "https://atharva-borekar.github.io/react-portfolio/static/media/body_background_1.40d7371ab6f1660a15f2.jpg",
@@ -14,11 +14,11 @@
     "static/media/react_query_logo.png": "https://atharva-borekar.github.io/react-portfolio/static/media/react_query_logo.0479c4cf419c6e8248e9.png",
     "index.html": "https://atharva-borekar.github.io/react-portfolio/index.html",
     "main.442b98ad.css.map": "https://atharva-borekar.github.io/react-portfolio/static/css/main.442b98ad.css.map",
-    "main.7379da0b.js.map": "https://atharva-borekar.github.io/react-portfolio/static/js/main.7379da0b.js.map",
+    "main.6237a552.js.map": "https://atharva-borekar.github.io/react-portfolio/static/js/main.6237a552.js.map",
     "787.a2cb61a6.chunk.js.map": "https://atharva-borekar.github.io/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.442b98ad.css",
-    "static/js/main.7379da0b.js"
+    "static/js/main.6237a552.js"
   ]
 }
