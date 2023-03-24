@@ -1,22 +1,30 @@
+import { ThemeContext } from 'contexts/themeContext';
+import { useContext } from 'react';
 import { Card } from 'react-bootstrap';
 import './timeline.scss';
 
-const TimelineCard = ({ work }: { work: any }) => {
+const TimelineCard = ({ work, theme }: { work: any; theme: any }) => {
+  const { type } = theme;
+  console.log({ theme });
   return (
     <div className='d-flex'>
       <div className='role-start'></div>
-      <Card className='my-3 mx-3 w-100' bg='dark' text='light'>
+      <Card className={`my-3 mx-3 w-100 role-card-${type}`}>
         <Card.Header className='d-flex flex-column'>
-          <h3>{work.designation}</h3>
+          <h2>{work.designation}</h2>
           <em>
             {work.fromDate}-{work.toDate}
           </em>
         </Card.Header>
         <Card.Body>
-          <h5>Responsibilities:</h5>
+          <h4>Responsibilities:</h4>
           <ul>
             {work?.description?.map((responsibility: string, index: number) => {
-              return <li key={index}>{responsibility}</li>;
+              return (
+                <li key={index} className='fw-semibold fs-5'>
+                  {responsibility}
+                </li>
+              );
             })}
           </ul>
         </Card.Body>
@@ -72,12 +80,13 @@ const workExperience = [
 ];
 
 const TimeLine = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className='d-flex timeline-container'>
       <div className='timeline'></div>
       <div>
         {workExperience.map((work) => (
-          <TimelineCard key={work.id} work={work} />
+          <TimelineCard key={work.id} work={work} theme={theme} />
         ))}
       </div>
     </div>
