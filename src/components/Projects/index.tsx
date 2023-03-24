@@ -42,8 +42,10 @@ const projects = [
     id: 5,
     name: 'Job Referral System',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    footer: [],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    footer: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    ],
     summary: 'aaaaaaaa',
   },
 ];
@@ -56,23 +58,23 @@ const ProjectsPage = () => {
       <h1 className={`text-${theme.color}`}>Projects Page</h1>
       <Row>
         {projects.map((project) => (
-          <Col xl={6} key={project.id}>
+          <Col key={project.id}>
             <CustomCard
               frontContent={
-                <Card className='project-card'>
-                  <Card.Header className='bg-dark'>{project.name}</Card.Header>
-                  <Card.Body className='bg-dark'>{project.summary}</Card.Body>
-                  <Card.Footer className='bg-dark'></Card.Footer>
-                </Card>
+                <div className='project-card p-3'>
+                  <Card.Header className='bg-dark project-card-header'>{project.name}</Card.Header>
+                  <Card.Body className='bg-dark project-card-body'>{project.summary}</Card.Body>
+                  <Card.Footer className='bg-dark project-card-footer'></Card.Footer>
+                </div>
               }
               backContent={
-                <Card className='project-card'>
-                  <Card.Header className='bg-dark'>
+                <div className='project-card p-4'>
+                  <div className='bg-dark project-card-header'>
                     <h3>{project.name}</h3>
-                  </Card.Header>
-                  <Card.Body className='bg-dark'>{project.description}</Card.Body>
-                  <Card.Footer className='bg-dark'></Card.Footer>
-                </Card>
+                  </div>
+                  <div className='bg-dark project-card-body'>{project.description}</div>
+                  <div className='bg-dark project-card-footer'>{project?.footer?.[0]}</div>
+                </div>
               }
             />
           </Col>
