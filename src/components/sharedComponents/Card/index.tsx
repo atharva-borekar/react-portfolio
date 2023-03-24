@@ -2,12 +2,7 @@ import './card.scss';
 const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backContent?: any }) => {
   return (
     <div className='flip-box'>
-      <div
-        className='front bg-dark'
-        style={{
-          backgroundImage: require('https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&h=350'),
-        }}
-      >
+      <div className='front bg-dark'>
         <div className='content'>{frontContent}</div>
       </div>
       <div className='back bg-dark'>
