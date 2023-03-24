@@ -8,7 +8,7 @@ const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backCon
           backgroundImage: require('https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&h=350'),
         }}
       >
-        <div className='content text-center'>
+        <div className='content'>
           {frontContent}
           <br />
           {/* <span className='click-for-more'></span> */}

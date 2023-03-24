@@ -1,0 +1,44 @@
+.unskew-content-front {
+  transform: skew(0deg, 6deg);
+}
+
+.unskew-content-back {
+  transform: skew(0deg, -6deg);
+}
+
+.project-body-front {
+  font-size: 1.5rem;
+  max-height: 40vh;
+  overflow: auto;
+}
+.project-body-front::-webkit-scrollbar {
+  display: none;
+}
+
+.project-body-back {
+  font-size: 1.5rem;
+  max-height: 40vh;
+  overflow: auto;
+}
+.project-body-back::-webkit-scrollbar {
+  display: none;
+}
+
+.project-header-front {
+  height: 6rem;
+  justify-content: center;
+}
+
+.project-header-back {
+  height: 6rem;
+  justify-content: center;
+}
+
+.project-footer-front {
+  position: absolute;
+  bottom: 10%;
+}
+.project-footer-back {
+  position: absolute;
+  bottom: 10%;
+}
