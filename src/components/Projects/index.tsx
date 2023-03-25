@@ -85,87 +85,89 @@ const ProjectsPage = () => {
 
   return (
     <Page>
-      <h1 className={`text-${theme.color}`}>Projects</h1>
-      <Row>
-        {projects.map((project) => (
-          <Col key={project.id}>
-            <CustomCard
-              frontContent={
-                <Card className='bg-dark project-content-front'>
-                  <Card.Img
-                    variant='top'
-                    src={require('../../assets/images/react_logo.png')}
-                    className='h-25'
-                  />
-                  <Card.Body className='bg-dark project-content-body'>
-                    <Card.Title>{project.name}</Card.Title>
-                    <Card.Text className='project-content-body'>{project.summary}</Card.Text>
-                  </Card.Body>
-                </Card>
-              }
-              backContent={
-                <Card className='bg-dark project-content-back'>
-                  <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
-                  <Card.Body className='bg-dark project-content-body'>
-                    <Card.Title>{project.name}</Card.Title>
-                    <Card.Text className='project-content-body'>
-                      <ul>
-                        {project.description?.map((e, index) => (
-                          <li key={index}>{e}</li>
-                        ))}
-                      </ul>
-                    </Card.Text>
-                  </Card.Body>
-                  <Card.Footer>
-                    {project?.github && (
-                      <ButtonIcon
-                        onClick={() => {
-                          window.open(project.github);
-                        }}
-                        Icon={FaGithub}
-                        size='2em'
-                      />
-                    )}
-                    {project?.website && (
-                      <ButtonIcon
-                        onClick={() => {
-                          window.open(project.website);
-                        }}
-                        Icon={CgWebsite}
-                        size='2em'
-                      />
-                    )}
-                  </Card.Footer>
-                </Card>
-                // <div>
-                //   <div className='project-header-back'>
-                //     <h1>{project.name}</h1>
-                //   </div>
-                //   <div className='project-body-back mt-5'>
-                // <ul>
-                //   {project.description?.map((e, index) => (
-                //     <li key={index}>{e}</li>
-                //   ))}
-                // </ul>
-                //   </div>
-                //   <div className='project-footer-back'>
-                // {project?.github && (
-                //   <ButtonIcon
-                //     onClick={() => {
-                //       window.open(project.github);
-                //     }}
-                //     Icon={FaGithub}
-                //     size='2em'
-                //   />
-                // )}
-                //   </div>
-                //   )
-                // </div>
-              }
-            />
-          </Col>
-        ))}
-      </Row>
+      <div className='projects-content'>
+        <h1 className={`text-${theme.color}`}>Projects</h1>
+        <Row>
+          {projects.map((project) => (
+            <Col key={project.id}>
+              <CustomCard
+                frontContent={
+                  <Card className='bg-dark project-content-front'>
+                    <Card.Img
+                      variant='top'
+                      src={require('../../assets/images/react_logo.png')}
+                      className='h-25'
+                    />
+                    <Card.Body className='bg-dark project-content-body'>
+                      <Card.Title>{project.name}</Card.Title>
+                      <Card.Text className='project-content-body'>{project.summary}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                }
+                backContent={
+                  <Card className='bg-dark project-content-back'>
+                    <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
+                    <Card.Body className='bg-dark project-content-body'>
+                      <Card.Title>{project.name}</Card.Title>
+                      <Card.Text className='project-content-body'>
+                        <ul>
+                          {project.description?.map((e, index) => (
+                            <li key={index}>{e}</li>
+                          ))}
+                        </ul>
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      {project?.github && (
+                        <ButtonIcon
+                          onClick={() => {
+                            window.open(project.github);
+                          }}
+                          Icon={FaGithub}
+                          size='2em'
+                        />
+                      )}
+                      {project?.website && (
+                        <ButtonIcon
+                          onClick={() => {
+                            window.open(project.website);
+                          }}
+                          Icon={CgWebsite}
+                          size='2em'
+                        />
+                      )}
+                    </Card.Footer>
+                  </Card>
+                  // <div>
+                  //   <div className='project-header-back'>
+                  //     <h1>{project.name}</h1>
+                  //   </div>
+                  //   <div className='project-body-back mt-5'>
+                  // <ul>
+                  //   {project.description?.map((e, index) => (
+                  //     <li key={index}>{e}</li>
+                  //   ))}
+                  // </ul>
+                  //   </div>
+                  //   <div className='project-footer-back'>
+                  // {project?.github && (
+                  //   <ButtonIcon
+                  //     onClick={() => {
+                  //       window.open(project.github);
+                  //     }}
+                  //     Icon={FaGithub}
+                  //     size='2em'
+                  //   />
+                  // )}
+                  //   </div>
+                  //   )
+                  // </div>
+                }
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
     </Page>
   );
 };

@@ -1,3 +1,11 @@
+.projects-content {
+  padding: 0 2%;
+  overflow: hidden;
+  height: 98%;
+  display: flexbox;
+  position: relative;
+}
+
 .projects-head-name-dark {
   font-size: 8rem;
   color: var(--text-secondary-dark);
