@@ -89,24 +89,23 @@ const ProjectsPage = () => {
         <h1 className={`text-${theme.color}`}>Projects</h1>
         <Row>
           {projects.map((project) => (
-            <Col key={project.id}>
+            <Col key={project.id} xl={3} xs={12} lg={3} className='project-card-column'>
               <CustomCard
                 frontContent={
                   <Card className='bg-dark project-content-front'>
                     <Card.Img
                       variant='top'
                       src={require('../../assets/images/react_logo.png')}
-                      className='h-25'
+                      className='h-75'
                     />
                     <Card.Body className='bg-dark project-content-body'>
-                      <Card.Title>{project.name}</Card.Title>
+                      <Card.Title className='project-content-head'>{project.name}</Card.Title>
                       <Card.Text className='project-content-body'>{project.summary}</Card.Text>
                     </Card.Body>
                   </Card>
                 }
                 backContent={
                   <Card className='bg-dark project-content-back'>
-                    <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
                     <Card.Body className='bg-dark project-content-body'>
                       <Card.Title>{project.name}</Card.Title>
                       <Card.Text className='project-content-body'>

@@ -5,3 +5,31 @@
   display: flexbox;
   position: relative;
 }
+
+.project-card-column {
+  display: flex;
+}
+
+.project-content-front {
+  height: 100%;
+  overflow-y: auto;
+}
+.project-content-front::-webkit-scrollbar {
+  display: none;
+}
+
+.project-content-back {
+  height: 100%;
+  overflow-y: auto;
+}
+.project-content-back::-webkit-scrollbar {
+  display: none;
+}
+
+.project-content-head {
+  font-size: 1rem;
+}
+
+.project-content-body {
+  font-size: 1rem;
+}

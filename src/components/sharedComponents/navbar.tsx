@@ -8,7 +8,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ThemeContext } from 'contexts/themeContext';
 import { useContext, useState } from 'react';
-import { Button, Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import router from 'root/routes';
 import './navbarDark.scss';
@@ -82,7 +82,7 @@ const SideNavbar = (props: any) => {
               <div className='vl'></div>
               <Navlink icon={faAddressCard} href='/about' tag='About' />
               <div className='vl'></div>
-              <Button onClick={toggleTheme}>Toggle Theme</Button>
+              {/* <Button onClick={toggleTheme}>Toggle Theme</Button> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
