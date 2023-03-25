@@ -19,10 +19,10 @@
 }
 
 .project-content-back {
-  height: 100%;
+  height: inherit;
   overflow-y: auto;
 }
-.project-content-back::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -30,6 +30,24 @@
   font-size: 1rem;
 }
 
-.project-content-body {
-  font-size: 1rem;
+.project-content-body-front {
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.project-content-body-back {
+  font-size: 1.25rem;
+  justify-content: center;
+  text-align: justify;
+  overflow-y: auto;
+}
+.project-content-body-back ::-webkit-scrollbar {
+  display: none;
+}
+.project-content-back-header {
+  height: 10%;
+}
+
+.project-content-back-footer {
+  height: 15%;
 }

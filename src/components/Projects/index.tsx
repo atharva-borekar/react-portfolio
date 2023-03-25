@@ -16,6 +16,7 @@ const projects = [
       'Create a production build locally.',
       'Transfer the build to the server specified.',
       'Install and configure NGINX server on AWS instance.',
+      'Tech Stack: Node.Js, SSH2, AWS EC2',
     ],
     footer: [],
     summary:
@@ -32,6 +33,7 @@ const projects = [
       'Create a production build locally. ',
       'Transfer the build to the server specified. ',
       'Install and configure NGINX server on AWS instance.',
+      'Tech Stack: React.Js, TypeScript, React Router, HTML/CSS, Bootstrap, SCSS',
     ],
     footer: [],
     summary:
@@ -46,6 +48,7 @@ const projects = [
       'Create a production build locally.',
       'Transfer the build to the server specified.',
       'Install and configure NGINX server on AWS instance.',
+      'Tech Stack: Python, Pygame, Adobe Photoshop',
     ],
     footer: [],
     summary:
@@ -58,6 +61,7 @@ const projects = [
     description: [
       'This project is made to be deployed in P.E.S Modern College of Engineering for better information sharing inside the college.',
       'You can make changes to this project and deploy it in your systems as well.',
+      'Tech Stack: Android Studio, Android SDK, Java, XML',
     ],
     footer: [],
     summary:
@@ -70,6 +74,7 @@ const projects = [
     description: [
       'The Job Referral App is a platform where companies can ask their Employees for referrals for the posts generated in the company. ',
       'The recruiters will be able to post the requirements and the Employees will be able to view the posts, ask doubts in the comments section and also post the referrals to the employer.',
+      'Tech Stack: React Native, JavaScript, Java',
     ],
     footer: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -81,7 +86,7 @@ const projects = [
 ];
 
 const ProjectsPage = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Page>
@@ -96,19 +101,23 @@ const ProjectsPage = () => {
                     <Card.Img
                       variant='top'
                       src={require('../../assets/images/react_logo.png')}
-                      className='h-75'
+                      className='h-50'
                     />
                     <Card.Body className='bg-dark project-content-body'>
                       <Card.Title className='project-content-head'>{project.name}</Card.Title>
-                      <Card.Text className='project-content-body'>{project.summary}</Card.Text>
+                      <Card.Text className='project-content-body-front'>
+                        {project.summary}
+                      </Card.Text>
                     </Card.Body>
                   </Card>
                 }
                 backContent={
                   <Card className='bg-dark project-content-back'>
                     <Card.Body className='bg-dark project-content-body'>
-                      <Card.Title>{project.name}</Card.Title>
-                      <Card.Text className='project-content-body'>
+                      <Card.Title className='project-content-back-header'>
+                        {project.name}
+                      </Card.Title>
+                      <Card.Text className='project-content-body-back'>
                         <ul>
                           {project.description?.map((e, index) => (
                             <li key={index}>{e}</li>
@@ -116,7 +125,7 @@ const ProjectsPage = () => {
                         </ul>
                       </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
+                    <Card.Footer className='project-content-back-footer'>
                       {project?.github && (
                         <ButtonIcon
                           onClick={() => {

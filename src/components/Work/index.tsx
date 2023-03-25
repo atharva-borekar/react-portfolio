@@ -67,10 +67,10 @@ const WorkPage = () => {
     <Page>
       <div className='work-content'>
         <Row>
-          <Col>
+          <Col xl={8} lg={8} sm={12}>
             <TimeLine />
           </Col>
-          <Col>
+          <Col xl={4} lg={4} sm={12}>
             {logos.map(
               (logo) =>
                 logo.imgSrc && (
