@@ -1,15 +1,15 @@
+import BootstrapLogo from 'assets/images/bootstrap_logo.png';
+import HtmlCssLogo from 'assets/images/html_css_logo.png';
+import JavascriptLogo from 'assets/images/javascript_logo.png';
+import ReactLogo from 'assets/images/react_logo.png';
+import ReactQueryLogo from 'assets/images/react_query_logo.png';
+import ReduxLogo from 'assets/images/redux_logo.png';
+import ReduxSagaLogo from 'assets/images/redux_saga_logo.png';
+import TypescriptLogo from 'assets/images/typescript_logo.png';
 import Page from 'components/sharedComponents/navbar';
 import { Col, Row } from 'react-bootstrap';
 import TimeLine from './Timeline';
 import './work.scss';
-import ReactLogo from 'assets/images/react_logo.png';
-import JavascriptLogo from 'assets/images/javascript_logo.png';
-import TypescriptLogo from 'assets/images/typescript_logo.png';
-import ReactQueryLogo from 'assets/images/react_query_logo.png';
-import ReduxLogo from 'assets/images/redux_logo.png';
-import ReduxSagaLogo from 'assets/images/redux_saga_logo.png';
-import BootstrapLogo from 'assets/images/bootstrap_logo.png';
-import HtmlCssLogo from 'assets/images/html_css_logo.png';
 
 const logos = [
   {
@@ -65,25 +65,27 @@ const logos = [
 const WorkPage = () => {
   return (
     <Page>
-      <Row>
-        <Col>
-          <TimeLine />
-        </Col>
-        <Col>
-          {logos.map(
-            (logo) =>
-              logo.imgSrc && (
-                <img
-                  key={logo.id}
-                  className={`work-logo ${logo?.shouldSpin ? 'spin' : ''}`}
-                  src={logo.imgSrc}
-                  alt={logo.title}
-                  title={logo.title}
-                />
-              ),
-          )}
-        </Col>
-      </Row>
+      <div className='work-content'>
+        <Row>
+          <Col>
+            <TimeLine />
+          </Col>
+          <Col>
+            {logos.map(
+              (logo) =>
+                logo.imgSrc && (
+                  <img
+                    key={logo.id}
+                    className={`work-logo ${logo?.shouldSpin ? 'spin' : ''}`}
+                    src={logo.imgSrc}
+                    alt={logo.title}
+                    title={logo.title}
+                  />
+                ),
+            )}
+          </Col>
+        </Row>
+      </div>
     </Page>
   );
 };
