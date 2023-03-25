@@ -6,19 +6,10 @@
 .content-body {
   width: 90vw;
   margin-top: 5%;
-  margin-bottom: 2vh;
 }
 
 .side-navbar {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 8rem;
-  // background: var(--bg-primary);
   color: '#03C988';
-  position: sticky;
-  margin-top: auto;
-  height: 100%;
 }
 
 .side-navbar :hover {
@@ -29,10 +20,6 @@
   color: #fff !important;
 }
 
-// primary:#13005a
-// accent:#00337C
-// primary-light: #1C82AD
-// secondary: #03C988
 .side-navbar-head {
   background: #13005a;
   color: var(--text-primary);
@@ -50,9 +37,18 @@
 
 .side-navbar-body {
   color: #03c988;
-  height: 100%;
+}
+
+.navbar-collapse {
+  flex-grow: 0 !important;
 }
 
 .side-navbar-link {
   color: #03c988;
+}
+
+.vl {
+  border-left: 3px solid gray;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }

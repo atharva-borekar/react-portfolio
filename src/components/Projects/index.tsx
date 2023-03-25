@@ -92,7 +92,11 @@ const ProjectsPage = () => {
             <CustomCard
               frontContent={
                 <Card className='bg-dark project-content-front'>
-                  <Card.Img variant='top' src={require('../../assets/images/react_logo.png')} />
+                  <Card.Img
+                    variant='top'
+                    src={require('../../assets/images/react_logo.png')}
+                    className='h-25'
+                  />
                   <Card.Body className='bg-dark project-content-body'>
                     <Card.Title>{project.name}</Card.Title>
                     <Card.Text className='project-content-body'>{project.summary}</Card.Text>

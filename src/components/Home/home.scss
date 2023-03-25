@@ -16,16 +16,21 @@
 }
 
 .home-head-text {
+  font-size: 8rem;
   transition: color 0.5s ease;
 }
 
+@media only screen and (max-width: 768px) {
+  .home-head-text {
+    font-size: 2rem;
+  }
+}
+
 .home-head-name-dark {
-  font-size: 8rem;
   color: var(--text-secondary-dark);
 }
 
 .home-head-name-light {
-  font-size: 8rem;
   color: var(--text-secondary-light);
 }
 

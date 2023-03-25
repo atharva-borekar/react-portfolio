@@ -46,7 +46,9 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
             size={'2x'}
             icon={icon}
             bounce={shouldBounce}
-            color={shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : '#1C82AD'}
+            className={`${
+              shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : 'text-warning'
+            }`}
           />
         </Nav.Link>
       </OverlayTrigger>
@@ -58,28 +60,27 @@ const SideNavbar = (props: any) => {
   const { toggleTheme, theme } = useContext(ThemeContext);
 
   return (
-    <div className='d-flex flex-row view'>
+    <div className='view'>
       <Navbar className='side-navbar' expand='sm'>
-        <Container className='d-flex flex-column'>
+        <Container className='d-flex justify-content-between'>
           <Navbar.Brand className={`side-navbar-head text-${theme.color}`} href='/'>
             AB
           </Navbar.Brand>
 
-          <Navbar.Toggle />
-          <Navbar.Collapse id='basic-navbar-nav' className='align-items-end justify-content-center'>
-            <Nav className='d-flex flex-column side-navbar-body'>
-              <hr />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='d-flex side-navbar-body'>
+              <div className='vl'></div>
               <Navlink icon={faHouse} href='/' tag='Home' />
-              <hr />
+              <div className='vl'></div>
               <Navlink icon={faBriefcase} href='/work' tag='Work' />
-              <hr />
+              <div className='vl'></div>
 
               <Navlink icon={faBoxesPacking} href='/projects' tag='Projects' />
-              <hr />
+              <div className='vl'></div>
               <Navlink icon={faBox} href='/resume' tag='Resume' />
-              <hr />
+              <div className='vl'></div>
               <Navlink icon={faAddressCard} href='/about' tag='About' />
-              <hr />
+              <div className='vl'></div>
               <Button onClick={toggleTheme}>Toggle Theme</Button>
             </Nav>
           </Navbar.Collapse>
