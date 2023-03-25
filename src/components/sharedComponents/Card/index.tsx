@@ -1,12 +1,10 @@
 import './card.scss';
 const CustomCard = ({ frontContent, backContent }: { frontContent?: any; backContent?: any }) => {
   return (
-    <div className='flip-box'>
-      <div className='front bg-dark'>
-        <div className='content'>{frontContent}</div>
-      </div>
-      <div className='back bg-dark'>
-        <div className='content'>{backContent}</div>
+    <div className='flip-card'>
+      <div className='flip-card-inner'>
+        <div className='flip-card-front'>{frontContent}</div>
+        <div className='flip-card-back'>{backContent}</div>
       </div>
     </div>
   );
