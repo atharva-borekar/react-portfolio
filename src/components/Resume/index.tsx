@@ -10,16 +10,16 @@ const ResumePage = () => {
     <Page>
       <div className='resume-content'>
         <Row>
-          <Col>
+          <Col xl={6}>
             <div className={`resume-head-name-${theme.color} text-light`}>
               <h1>Resume</h1>
             </div>
             <img className='resume-img' src={require('../../assets/images/resume.jpg')} />
           </Col>
-          <Col>
+          {/* <Col>
             <h1 className={`resume-head-name-${theme.color}  text-light`}>CV</h1>
             <img className='resume-img' src={require('../../assets/images/cv.jpg')} />
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </Page>
