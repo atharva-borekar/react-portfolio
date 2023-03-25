@@ -20,12 +20,6 @@
   transition: color 0.5s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  .home-head-text {
-    font-size: 2rem;
-  }
-}
-
 .home-head-name-dark {
   color: var(--text-secondary-dark);
 }
@@ -35,12 +29,10 @@
 }
 
 .home-head-role-dark {
-  font-size: 6rem;
   color: var(--text-secondary-dark);
 }
 
 .home-head-role-light {
-  font-size: 6rem;
   color: var(--text-secondary-light);
 }
 
@@ -59,4 +51,14 @@
 .home-foot {
   height: max-content;
   background-color: blueviolet;
+}
+
+@media only screen and (max-width: 768px) {
+  .home-head-text {
+    font-size: 2rem;
+    transition: all 0.5s ease;
+  }
+  .home-body {
+    font-size: 1rem;
+  }
 }

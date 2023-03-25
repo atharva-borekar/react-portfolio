@@ -67,6 +67,7 @@ const SideNavbar = (props: any) => {
             AB
           </Navbar.Brand>
 
+          <Navbar.Toggle />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='d-flex side-navbar-body'>
               <div className='vl'></div>

@@ -15,19 +15,30 @@
   }
 }
 
-:root {
-  --work-logo-height: 10rem;
-}
-
 .spin {
   animation: spin 3s infinite linear;
   width: auto;
-  height: var(--work-logo-height);
+  height: 10rem;
   padding: 2%;
 }
 
 .work-logo {
   width: auto;
-  height: var(--work-logo-height);
+  height: 10rem;
   padding: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .spin {
+    animation: spin 3s infinite linear;
+    width: auto;
+    height: 5rem;
+    padding: 1%;
+  }
+
+  .work-logo {
+    width: auto;
+    height: 5rem;
+    padding: 1%;
+  }
 }

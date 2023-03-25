@@ -23,7 +23,7 @@ const TimelineCard = ({ work, theme }: { work: any; theme: any }) => {
           <ul>
             {work?.description?.map((responsibility: string, index: number) => {
               return (
-                <li key={index} className='fw-semibold fs-5'>
+                <li key={index} className='fw-semibold work-responsibility'>
                   {responsibility}
                 </li>
               );

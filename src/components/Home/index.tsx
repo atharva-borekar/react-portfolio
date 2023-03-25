@@ -13,16 +13,16 @@ const HomePage = () => {
         <div className='home-head'>
           <div className={`home-head-text home-head-name-${theme.type}`}>Atharva Borekar</div>
           <div className={`home-head-text home-head-role-${theme.type}`}>Frontend Developer</div>
-          <Button disabled variant='outline-warning' className='mx-2'>
+          <Button disabled variant='outline-warning' className='mx-2 my-2'>
             React.Js
           </Button>
-          <Button disabled variant='outline-warning' className='mx-2'>
+          <Button disabled variant='outline-warning' className='mx-2 my-2'>
             JavaScript
           </Button>
-          <Button disabled variant='outline-warning' className='mx-2'>
+          <Button disabled variant='outline-warning' className='mx-2 my-2'>
             TypeScript
           </Button>
-          <Button disabled variant='outline-warning' className='mx-2'>
+          <Button disabled variant='outline-warning' className='mx-2 my-2'>
             HTML / CSS
           </Button>
         </div>
