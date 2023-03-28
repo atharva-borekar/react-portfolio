@@ -70,9 +70,9 @@ const workExperience = [
   {
     id: '3',
     designation: 'React Native Developer (Internship)',
-    organization: 'Josh Software Pvt. Ltd.',
-    fromDate: '01/2021',
-    toDate: '07/2021',
+    organization: 'Expert English Academy',
+    fromDate: '01/2020',
+    toDate: '03/2020',
     description: [
       'Desgined screens using Figma and implemented UI on React Native.',
       'Designed UI elements and integrated REST APIs',
