@@ -1,6 +1,5 @@
 import ButtonIcon from 'components/sharedComponents/ButtonIcon';
 import CustomCard from 'components/sharedComponents/Card';
-import Page from 'components/sharedComponents/navbar';
 import { ThemeContext } from 'contexts/themeContext';
 import { useContext } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
@@ -90,94 +89,64 @@ const ProjectsPage = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <Page>
-      <div className='projects-content'>
-        <h1 className={`text-${theme.color}`}>Projects</h1>
-        <Row>
-          {projects.map((project) => (
-            <Col key={project.id} xl={3} xs={12} lg={3} className='project-card-column'>
-              <CustomCard
-                frontContent={
-                  <Card className='bg-dark project-content-front'>
-                    <Card.Img
-                      variant='top'
-                      src={require('../../assets/images/react_logo.png')}
-                      className='h-50'
-                    />
-                    <Card.Body className='bg-dark project-content-body'>
-                      <Card.Title className='project-content-head'>{project.name}</Card.Title>
-                      <Card.Text className='project-content-body-front'>
-                        {project.summary}
-                      </Card.Text>
-                    </Card.Body>
-                  </Card>
-                }
-                backContent={
-                  <Card className='bg-dark project-content-back'>
-                    <Card.Body className='bg-dark project-content-body'>
-                      <Card.Title className='project-content-back-header'>
-                        {project.name}
-                      </Card.Title>
-                      <Card.Text className='project-content-body-back'>
-                        <ul>
-                          {project.description?.map((e, index) => (
-                            <li key={index}>{e}</li>
-                          ))}
-                        </ul>
-                      </Card.Text>
-                    </Card.Body>
-                    <Card.Footer className='project-content-back-footer'>
-                      {project?.github && (
-                        <ButtonIcon
-                          onClick={() => {
-                            window.open(project.github);
-                          }}
-                          Icon={FaGithub}
-                          size='2em'
-                        />
-                      )}
-                      {project?.website && (
-                        <ButtonIcon
-                          onClick={() => {
-                            window.open(project.website);
-                          }}
-                          Icon={CgWebsite}
-                          size='2em'
-                        />
-                      )}
-                    </Card.Footer>
-                  </Card>
-                  // <div>
-                  //   <div className='project-header-back'>
-                  //     <h1>{project.name}</h1>
-                  //   </div>
-                  //   <div className='project-body-back mt-5'>
-                  // <ul>
-                  //   {project.description?.map((e, index) => (
-                  //     <li key={index}>{e}</li>
-                  //   ))}
-                  // </ul>
-                  //   </div>
-                  //   <div className='project-footer-back'>
-                  // {project?.github && (
-                  //   <ButtonIcon
-                  //     onClick={() => {
-                  //       window.open(project.github);
-                  //     }}
-                  //     Icon={FaGithub}
-                  //     size='2em'
-                  //   />
-                  // )}
-                  //   </div>
-                  //   )
-                  // </div>
-                }
-              />
-            </Col>
-          ))}
-        </Row>
-      </div>
-    </Page>
+    <div className='projects-content'>
+      <h1 className={`text-${theme.color}`}>Projects</h1>
+      <Row>
+        {projects.map((project) => (
+          <Col key={project.id} xl={3} xs={12} lg={3} className='project-card-column'>
+            <CustomCard
+              frontContent={
+                <Card className='bg-dark project-content-front'>
+                  <Card.Img
+                    variant='top'
+                    src={require('../../assets/images/react_logo.png')}
+                    className='h-50'
+                  />
+                  <Card.Body className='bg-dark project-content-body'>
+                    <Card.Title className='project-content-head'>{project.name}</Card.Title>
+                    <Card.Text className='project-content-body-front'>{project.summary}</Card.Text>
+                  </Card.Body>
+                </Card>
+              }
+              backContent={
+                <Card className='bg-dark project-content-back'>
+                  <Card.Body className='bg-dark project-content-body'>
+                    <Card.Title className='project-content-back-header'>{project.name}</Card.Title>
+                    <Card.Text className='project-content-body-back'>
+                      <ul>
+                        {project.description?.map((e, index) => (
+                          <li key={index}>{e}</li>
+                        ))}
+                      </ul>
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer className='project-content-back-footer'>
+                    {project?.github && (
+                      <ButtonIcon
+                        onClick={() => {
+                          window.open(project.github);
+                        }}
+                        Icon={FaGithub}
+                        size='2em'
+                      />
+                    )}
+                    {project?.website && (
+                      <ButtonIcon
+                        onClick={() => {
+                          window.open(project.website);
+                        }}
+                        Icon={CgWebsite}
+                        size='2em'
+                      />
+                    )}
+                  </Card.Footer>
+                </Card>
+              }
+            />
+          </Col>
+        ))}
+      </Row>
+    </div>
   );
 };
 export default ProjectsPage;

@@ -6,11 +6,9 @@ import {
   faHouse,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ThemeContext } from 'contexts/themeContext';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Container, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
-import router from 'root/routes';
+// import router from 'root/routes';
 import './navbarDark.scss';
 
 const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
@@ -25,7 +23,7 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
       </Tooltip>
     );
   };
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
 
   return (
     <div className='d-flex justify-content-center align-items-center'>
@@ -39,7 +37,7 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
         <Nav.Link
           className='my-3 side-navbar-link'
           href={href}
-          onClick={() => router.navigate(href)}
+          // onClick={() => router.navigate(href)}
           active={Boolean(location)}
         >
           <FontAwesomeIcon
@@ -47,7 +45,8 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
             icon={icon}
             bounce={shouldBounce}
             className={`${
-              shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : 'text-warning'
+              // shouldBounce ? '#FFFFFF' : pathname === `${href}` ? '#FFFFFF' : 'text-warning'
+              ''
             }`}
           />
         </Nav.Link>
@@ -57,13 +56,13 @@ const Navlink = ({ icon, href, tag }: { icon: any; href: any; tag: any }) => {
 };
 
 const SideNavbar = (props: any) => {
-  const { toggleTheme, theme } = useContext(ThemeContext);
+  // const { toggleTheme, theme } = useContext(ThemeContext);
 
   return (
     <div className='view'>
       <Navbar className='side-navbar' expand='sm'>
         <Container className='d-flex justify-content-between'>
-          <Navbar.Brand className={`side-navbar-head text-${theme.color}`} href='/'>
+          <Navbar.Brand className={'side-navbar-head'} href='/'>
             AB
           </Navbar.Brand>
 

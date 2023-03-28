@@ -6,7 +6,6 @@ import ReactQueryLogo from 'assets/images/react_query_logo.png';
 import ReduxLogo from 'assets/images/redux_logo.png';
 import ReduxSagaLogo from 'assets/images/redux_saga_logo.png';
 import TypescriptLogo from 'assets/images/typescript_logo.png';
-import Page from 'components/sharedComponents/navbar';
 import { Col, Row } from 'react-bootstrap';
 import TimeLine from './Timeline';
 import './work.scss';
@@ -64,29 +63,27 @@ const logos = [
 
 const WorkPage = () => {
   return (
-    <Page>
-      <div className='work-content'>
-        <Row>
-          <Col xl={8} lg={8} sm={12}>
-            <TimeLine />
-          </Col>
-          <Col xl={4} lg={4} sm={12}>
-            {logos.map(
-              (logo) =>
-                logo.imgSrc && (
-                  <img
-                    key={logo.id}
-                    className={`work-logo ${logo?.shouldSpin ? 'spin' : ''}`}
-                    src={logo.imgSrc}
-                    alt={logo.title}
-                    title={logo.title}
-                  />
-                ),
-            )}
-          </Col>
-        </Row>
-      </div>
-    </Page>
+    <div className='work-content'>
+      <Row>
+        <Col xl={8} lg={8} sm={12}>
+          <TimeLine />
+        </Col>
+        <Col xl={4} lg={4} sm={12}>
+          {logos.map(
+            (logo) =>
+              logo.imgSrc && (
+                <img
+                  key={logo.id}
+                  className={`work-logo ${logo?.shouldSpin ? 'spin' : ''}`}
+                  src={logo.imgSrc}
+                  alt={logo.title}
+                  title={logo.title}
+                />
+              ),
+          )}
+        </Col>
+      </Row>
+    </div>
   );
 };
 export default WorkPage;

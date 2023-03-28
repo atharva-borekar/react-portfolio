@@ -1,7 +1,11 @@
+import AboutPage from 'components/About';
+import HomePage from 'components/Home';
+import ProjectsPage from 'components/Projects';
+import ResumePage from 'components/Resume';
+import Page from 'components/sharedComponents/navbar';
+import WorkPage from 'components/Work';
 import { ThemeContext, themes } from 'contexts/themeContext';
 import { useState } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from 'root/routes';
 import './App.css';
 
 const ThemeProvider = (props: any) => {
@@ -22,9 +26,13 @@ const ThemeProvider = (props: any) => {
 
 function App() {
   return (
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <Page>
+      <HomePage />
+      <WorkPage />
+      <ProjectsPage />
+      <ResumePage />
+      <AboutPage />
+    </Page>
   );
 }
 
